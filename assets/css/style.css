@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+section {
+    display: flex;
+    align-items: center;
+
+
+
+}
+.flex-column{
+    flex-direction: column;
+}
+
+
+.bg-color {
+    background-color: #2F1893;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+.logo{
+            font-family: "DM Sans", serif;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 31.25px;
+            letter-spacing: -0.2926828861236572px;
+            text-align: center;
+            color: #FFFFFF;
+           
+    
+        
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 30px 30px 0px 30px;
+
+
+}
+.w-100{ 
+    align-items: center;
+  
+}
+.text{
+   
+        font-family: "DM Sans",sans-serif;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: left;
+        color: #FFFFFF;
+       
+}
+
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.button {
+    border-radius: 100px;
+    background-color: #482BE7;
+   font-family: "DM Sans",sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        text-align: center;
+       color: #FFFFFF;
+    padding: 7px 12px 7px 12px;
+    border: none;
+}
+
+.container {
+    align-content: center;
+    justify-content: center;
+}
+
+.content {
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    text-align: center;
+    color: #FFFFFF;
+     padding: 150px 0px 0px 0px; 
+    align-items: center;
+}
+
+input[type="email"] {
+
+    font-family: DM Sans;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: left;
+    border-radius: 100px;
+    border: 1px solid grey;
+    color: #FFFFFF;
+    background-color: #2F1893;
+    padding: 16px 82px 18px 24px;
+     margin: 50px 0px 20px 40px;
+
+}
+
+.send {
+    background: #25DAC5;
+    border-radius: 30px;
+    font-family: Poppins;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: -0.25px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 14px 24px 14px 24px;
+
+    border: none;
+}
+
+.d-flex {
+    display: flex;
+
+}
+.align-items-center{
+    align-items: center;
+}
+.justify-content-center{
+    justify-content:center ;
+}
+
+.paragraph {
+    font-family: Poppins;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.2px;
+    text-align: left;
+    color: gray;
+     padding: 20px 0px 20px 0px;
+}
+
+
+
+
+
+
+@media(max-width:992px) {
+        .content {
+       
+        padding: 150px 100px 0px 100px;
+    } 
+
+         
+
+    input[type="email"] {
+        margin: 20px 10px 20px 10px;
+         padding: 12px 62px 14px 20px;
+     
+}
+}
+
+
+/* .navbar */
+
+@media(max-width:992px) {
+
+    .links {
+         flex-direction: column;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100%;
+        width: 100%; 
+        background-color: red;
+        transition: all 200ms linear;
+    }
+    .links ul{
+        flex-direction: column;
+        padding-left: 10%;
+        
+    }
+   
+    
+
+
+label[for="list"] {
+    width: 40px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+
+label[for="list"] span {
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 200ms linear;
+
+}
+
+
+
+input:checked~.links {
+    left: 0;
+    z-index: 1;
+}
+
+input:checked~label[for="list"] span:first-child {
+    transform: rotate(30deg);
+    transform-origin: left;
+}
+
+input:checked~label[for="list"] span:last-child {
+    transform: rotate(-30deg);
+    transform-origin: left;
+}
+
+input:checked~label[for="list"] span:nth-child(2) {
+    transform: rotate(-40px);
+  
+    visibility: hidden;
+}
+}
